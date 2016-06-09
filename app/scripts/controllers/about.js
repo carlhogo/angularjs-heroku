@@ -7,9 +7,8 @@
  * # AboutCtrl
  * Controller of the angularjsHerokuApp
  */
-var app = angular.module('angularjsHerokuApp',[]);
-
-app.controller('AboutCtrl', function () {
+angular.module('angularjsHerokuApp')
+  .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
