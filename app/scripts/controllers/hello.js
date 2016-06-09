@@ -1,5 +1,4 @@
-(function()
-{
+
 
   'use strict';
 
@@ -10,21 +9,13 @@
    * # AboutCtrl
    * Controller of the angularjsHerokuApp
    */
-  var app = angular.module('angularjsHerokuApp', [])
+  var app = angular.module('angularjsHerokuApp', []);
 
-  app.controller('HelloCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
-  
-  function Hello($scope, $http){
+  app.controller('HelloCtrl', ['$http', function ($http) {
+    var vm = this;
     $http.get('https://calm-fjord-47282.herokuapp.com/prueba/home/saludo').
       success(function (data) {
-        $scope.greetting = data;
-    })
-  }
-  
-})
+        vm.greetting = data;
+      console.log(data);
+    });
+  }]);
