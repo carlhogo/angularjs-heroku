@@ -17,11 +17,3 @@ app.controller('AboutCtrl', function () {
     ];
   });
 
-app.controller('ReviewController',['$http', function ($http) {
-  var vm = this;
-  $http.get('http://localhost:8080/prueba2/calculator/square?input=25').success(function(data){
-    vm.products = data;
-    console.log(data);
-  });
-
-}]);
